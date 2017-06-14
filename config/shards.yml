@@ -1,22 +1,21 @@
 octopus:
   verify_connection: true
   replicated: true
-#  fully_replicated: false
+  fully_replicated: false
 
   environments:
     - development
     - production
 
   development:
-    europe_databases:
-      slave1:
-        adapter: postgresql
-        encoding: unicode
-        host: 192.168.0.103
-        username: unit
-        password: unit237942
-        pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-        database: octopus_shards1
+    slave1:
+      adapter: postgresql
+      encoding: unicode
+      host: 192.168.0.103
+      username: unit
+      password: unit237942
+      pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+      database: octopus_shards1
   #
   #    slave2:
   #      adapter: postgresql
@@ -27,13 +26,13 @@ octopus:
   #      pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   #      database: octopus_shards3
 
-  production:
-      europe_databases:
-        slave1:
-          adapter: postgresql
-          encoding: unicode
-          host: 192.168.0.103
-          username: unit
-          password: unit237942
-          pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-          database: octopus_shards1
+#  production:
+#      europe_databases:
+#        slave1:
+#          adapter: postgresql
+#          encoding: unicode
+#          host: 192.168.0.103
+#          username: unit
+#          password: unit237942
+#          pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+#          database: octopus_shards1
