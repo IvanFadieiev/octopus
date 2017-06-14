@@ -1,7 +1,7 @@
 octopus:
   verify_connection: true
   replicated: true
-  fully_replicated: true
+#  fully_replicated: false
 
   environments:
     - development
